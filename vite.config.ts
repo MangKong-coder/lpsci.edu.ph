@@ -3,10 +3,13 @@ import { defineConfig } from "vite";
 import Icon from 'unplugin-icons/vite';
 import IconsResolver from 'unplugin-icons/resolver';
 import AutoImport from 'unplugin-auto-import/vite';
+import netlify from 'solid-start-netlify'
 
 export default defineConfig({
   plugins: [
-    solid(),
+    solid({
+      adapter: netlify()
+    }),
     AutoImport({
       resolvers: [IconsResolver({
         prefix: 'Icon',
