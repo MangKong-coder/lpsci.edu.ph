@@ -10,8 +10,11 @@ import tailwind from "@astrojs/tailwind";
 import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
+import netlify from "@astrojs/netlify/functions";
+
+// https://astro.build/config
 export default defineConfig({
   integrations: [solidJs(), tailwind()],
   output: "server",
-  adapter: cloudflare()
+  adapter: netlify()
 });
