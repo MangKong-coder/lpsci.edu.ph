@@ -13,8 +13,11 @@ import cloudflare from "@astrojs/cloudflare";
 import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
+import vercel from "@astrojs/vercel/serverless";
+
+// https://astro.build/config
 export default defineConfig({
   integrations: [solidJs(), tailwind()],
   output: "server",
-  adapter: netlify()
+  adapter: vercel()
 });
