@@ -3,10 +3,14 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			fontFamily: {
+				"bebas-neue": ['Bebas Neue', 'cursive'],
+				roboto: ['Roboto', 'sans-serif'],
+			},
 			colors: {
-				'lpsci-yellow': '#F1C400',
-				'lpsci-red': '#C64747',
-				'lpsci-green': '#318B68'
+				'lpsci-yellow': '#FACC15',
+				'lpsci-red': '#DC2626',
+				'lpsci-green': '#166534'
 			},
 		},
 	},

@@ -5,14 +5,6 @@ import solidJs from "@astrojs/solid-js";
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
-
-// https://astro.build/config
-import cloudflare from "@astrojs/cloudflare";
-
-// https://astro.build/config
-import netlify from "@astrojs/netlify/functions";
-
-// https://astro.build/config
 import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
