@@ -1,15 +1,13 @@
 ---
-import { FaBrandsFacebook, FaBrandsTwitter } from "solid-icons/fa";
-import { BiLogosGmail } from "solid-icons/bi";
 import NewsArticleCard from "../components/NewsArticleCard";
 import MainLayout from "../layouts/MainLayout.astro";
 import Navbar from "../components/Navbar";
 ---
 
 <MainLayout>
-  <main>
+  <header>
     {/* SECTION: Hero */}
-    <div class="max-h-screen w-screen">
+    <div class="h-full w-screen">
       <div class="relative w-full bg-lpsci-green">
         <img
           src="https://ucarecdn.com/e59eda1f-23b8-47e2-bddb-2322f04c38d1/-/preview/-/scale_crop/1280x720/smart/-/quality/smart/-/format/auto/"
@@ -21,48 +19,45 @@ import Navbar from "../components/Navbar";
           style={{ transform: "translate(-50%, -50%)" }}
         >
           <div>
-            <h1
-              class="text-6xl font-bold text-white mb-3 font-bebas-neue tracking-wide"
-            >
+            <h1 class="text-6xl font-bold text-white mb-3 tracking-wide">
               IN LPSCI,
             </h1>
             <h1
-              class="text-8xl text-center bg-white p-3 rounded-md shadow-md font-bebas-neue tracking-wide"
+              class="text-8xl text-center bg-white p-3 rounded-md shadow-md tracking-wide"
             >
               <span class="text-lpsci-green">WE</span>
               <span class="text-lpsci-red">SOAR</span>
               <span class="text-lpsci-yellow">HIGH</span>
             </h1>
-            <div class="flex items-center justify-center space-x-3 py-7">
+            <!-- <div class="flex items-center justify-center space-x-3 py-7">
               <button
                 type="button"
                 class="inline-flex items-center rounded-full border border-transparent bg-green-900 px-6 py-2 text-2xl font-medium text-white shadow-sm hover:bg-lpsci-green focus:outline-none focus:ring-2 focus:ring-lpsci-green focus:ring-offset-2"
               >
                 Apply now
               </button>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
     </div>
-    {/* SECTION: About */}
     <Navbar />
+  </header>
+  <main class="max-w-7xl w-full flex flex-col justify-center mx-auto">
+    {/* SECTION: About */}
     <div class="h-full w-full mt-12">
-      <div class="flex items-center justify-between px-5 space-x-4">
-        <div
-          class="h-[34rem] w-[25rem] rounded-[33px] relative group"
-          style="background: rgba(172, 49, 49, 1);"
-        >
+      <div class="flex items-center justify-center px-14 space-x-16">
+        <div class="h-96 w-1/4 rounded-[33px] relative group bg-red-800">
           <img
             src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80"
-            class="w-full h-full object-center object-cover rounded-[33px] opacity-[.6] brightness-[.8]"
+            class="w-full h-full object-center object-cover rounded-[33px] opacity-[0.4]"
             alt=""
           />
           <div class="absolute inset-0 h-full">
             <div
               class="w-full flex flex-col mx-auto items-center h-full justify-center text-white"
             >
-              <h3 class="text-7xl font-bebas-neue">About</h3>
+              <h3 class="text-7xl">About</h3>
               <div class="hidden group-hover:flex flex-col items-center w-full">
                 <div class="border-2 border-white w-1/2 my-3"></div>
                 <p>Background</p>
@@ -71,20 +66,18 @@ import Navbar from "../components/Navbar";
             </div>
           </div>
         </div>
-        <div
-          class="h-[34rem] w-[25rem] rounded-[33px] relative group"
-          style="background: rgba(177, 111, 10, 1);"
-        >
+
+        <!-- <div class="h-96 w-1/4 rounded-[33px] relative group bg-yellow-800">
           <img
             src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80"
-            class="w-full h-full object-center object-cover rounded-[33px] opacity-[.6] brightness-[.8]"
+            class="w-full h-full object-center object-cover rounded-[33px] opacity-[0.4]"
             alt=""
           />
           <div class="absolute inset-0 h-full">
             <div
               class="w-full flex flex-col mx-auto items-center h-full justify-center text-white"
             >
-              <h3 class="text-6xl font-bebas-neue">Application</h3>
+              <h3 class="text-6xl">Application</h3>
               <div class="hidden group-hover:flex flex-col items-center w-full">
                 <div class="border-2 border-white w-1/2 my-3"></div>
                 <p>Junior High School</p>
@@ -92,21 +85,19 @@ import Navbar from "../components/Navbar";
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="h-[34rem] w-[25rem] rounded-[33px] relative group"
-          style="background: rgba(26, 77, 46, 1);"
-        >
+        </div> -->
+
+        <div class="h-96 w-1/4 rounded-[33px] relative group bg-green-800">
           <img
             src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80"
-            class="w-full h-full object-center object-cover rounded-[33px] opacity-[.6] brightness-[.8]"
+            class="w-full h-full object-center object-cover rounded-[33px] opacity-[0.4]"
             alt=""
           />
           <div class="absolute inset-0 h-full">
             <div
               class="w-full flex flex-col mx-auto items-center h-full justify-center text-white"
             >
-              <h3 class="text-7xl font-bebas-neue">Events</h3>
+              <h3 class="text-7xl">Events</h3>
               <div class="hidden group-hover:flex flex-col items-center w-full">
                 <div class="border-2 border-white w-1/2 my-3"></div>
                 <p>School Program</p>
@@ -119,9 +110,7 @@ import Navbar from "../components/Navbar";
     </div>
     {/* SECTION: News Articles */}
     <div class="h-full w-full py-20 px-5">
-      <h1 class="text-7xl font-bold text-lpsci-green font-bebas-neue">
-        News & Articles
-      </h1>
+      <h1 class="text-7xl font-bold text-lpsci-green">News & Articles</h1>
       <div class="grid grid-cols-3 justify-between pt-16 px-6 w-full space-x-3">
         <NewsArticleCard />
         <NewsArticleCard />
@@ -131,34 +120,17 @@ import Navbar from "../components/Navbar";
     {/* SECTION: Footer */}
     <div class="bg-white h-[50vh] w-screen flex items-center justify-center">
       <div class="text-center">
-        <h1 class="text-8xl text-white mb-6 font-bebas-neue tracking-wide">
-          <span class="text-[#F96666]">
-            Become
+        <h1 class="text-6xl text-white mb-6 tracking-wide">
+          <span class="text-lpsci-red">
+            A bright mind
             {" "}
           </span>
-          <span class="text-[#FFD93D]">
-            a
+          <span class="text-lpsci-yellow">
+            is nothing without
             {" "}
           </span>
-          <span class="text-[#5F8D4E]"> Lapiscian!</span>
+          <span class="text-lpsci-green"> a humble heart</span>
         </h1>
-        <div class="space-x-2">
-          <a href="#">
-            <button class="p-1 text-[#F96666] text-5xl">
-              <FaBrandsFacebook />
-            </button>
-          </a>
-          <a href="#">
-            <button class="p-1 text-[#FFD93D] text-5xl">
-              <BiLogosGmail />
-            </button>
-          </a>
-          <a href="#">
-            <button class="p-1 text-[#5F8D4E] text-5xl">
-              <FaBrandsTwitter />
-            </button>
-          </a>
-        </div>
       </div>
     </div>
   </main>
