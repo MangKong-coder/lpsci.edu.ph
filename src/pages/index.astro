@@ -2,28 +2,31 @@
 import NewsArticleCard from "../components/NewsArticleCard";
 import MainLayout from "../layouts/MainLayout.astro";
 import Navbar from "../components/Navbar";
+import FeaturedCarousel from "../components/FeaturedCarousel";
 ---
 
 <MainLayout>
   <header>
-    {/* SECTION: Hero */}
-    <div class="h-full w-screen">
-      <div class="relative w-full bg-lpsci-green">
+    {/* SECTION: Header */}
+    <div class="h-screen md:h-full w-screen mb-8">
+      <div class="relative w-full md:h-full h-screen bg-lpsci-green">
         <img
-          src="https://ucarecdn.com/e59eda1f-23b8-47e2-bddb-2322f04c38d1/-/preview/-/scale_crop/1280x720/smart/-/quality/smart/-/format/auto/"
+          src="/header.png"
           alt=""
-          class="w-full h-full rounded-md opacity-50 brightness-[.69]"
+          class="w-full h-full rounded-md object-center object-cover opacity-50 brightness-[.69]"
         />
         <div
           class="absolute w-full h-full top-[50%] left-[50%] text-center flex justify-center items-center"
           style={{ transform: "translate(-50%, -50%)" }}
         >
           <div>
-            <h1 class="text-6xl font-bold text-white mb-3 tracking-wide">
+            <h1
+              class="text-5xl md:text-6xl font-bold text-white mb-3 tracking-wide"
+            >
               IN LPSCI,
             </h1>
             <h1
-              class="text-8xl text-center bg-white p-3 rounded-md shadow-md tracking-wide"
+              class="text-7xl lg:text-8xl text-center bg-white p-3 rounded-md shadow-md tracking-wide"
             >
               <span class="text-lpsci-green">WE</span>
               <span class="text-lpsci-red">SOAR</span>
@@ -43,94 +46,154 @@ import Navbar from "../components/Navbar";
     </div>
     <Navbar />
   </header>
-  <main class="max-w-7xl w-full flex flex-col justify-center mx-auto">
-    {/* SECTION: About */}
-    <div class="h-full w-full mt-12">
-      <div class="flex items-center justify-center px-14 space-x-16">
-        <div class="h-96 w-1/4 rounded-[33px] relative group bg-red-800">
-          <img
-            src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80"
-            class="w-full h-full object-center object-cover rounded-[33px] opacity-[0.4]"
-            alt=""
-          />
-          <div class="absolute inset-0 h-full">
-            <div
-              class="w-full flex flex-col mx-auto items-center h-full justify-center text-white"
+  <main class="2xl:max-w-7xl w-full">
+    {/* SECTION: Hero */}
+    <div
+      class="flex justify-center mx-auto h-full md:h-[60vh] w-full mt-32 px-5 md:px-16 mb-11"
+    >
+      <div
+        class="flex md:grid grid-cols-2 justify-center space-x-5 justify-items-center mx-auto w-full"
+      >
+        <div class="md:px-16">
+          <h1 class="text-9xl text-[#274E19]">LPSCI</h1>
+          <a href="/about">
+            <h2
+              class="text-6xl text-[#274E19] inline-flex items-center space-x-5 hover:underline"
             >
-              <h3 class="text-7xl">About</h3>
-              <div class="hidden group-hover:flex flex-col items-center w-full">
-                <div class="border-2 border-white w-1/2 my-3"></div>
-                <p>Background</p>
-                <p>Contacts</p>
-              </div>
-            </div>
-          </div>
+              ABOUT
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="80"
+                height="80"
+                viewBox="0 0 24 24"
+                ><path
+                  fill="currentColor"
+                  d="M13.3 17.275q-.3-.3-.288-.725t.313-.725L16.15 13H5q-.425 0-.713-.288T4 12q0-.425.288-.713T5 11h11.15L13.3 8.15q-.3-.3-.3-.713t.3-.712q.3-.3.713-.3t.712.3L19.3 11.3q.15.15.213.325t.062.375q0 .2-.063.375t-.212.325l-4.6 4.6q-.275.275-.687.275t-.713-.3Z"
+                  class="text-6xl"></path>
+              </svg>
+            </h2>
+          </a>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque,
+            odit? Pariatur, repudiandae esse. Molestiae quas doloremque quam
+            saepe commodi eos non ab, nemo unde. Omnis, natus architecto? Odio,
+            et voluptas.
+          </p>
         </div>
-
-        <!-- <div class="h-96 w-1/4 rounded-[33px] relative group bg-yellow-800">
+        <div
+          class="hidden md:block bg-lpsci-green rounded-full w-[470px] h-[470px]"
+        >
           <img
-            src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80"
-            class="w-full h-full object-center object-cover rounded-[33px] opacity-[0.4]"
+            src="/hero-circle.png"
+            class="w-full h-full object-cover rounded-full"
             alt=""
+            style="object-position: 45%;"
           />
-          <div class="absolute inset-0 h-full">
-            <div
-              class="w-full flex flex-col mx-auto items-center h-full justify-center text-white"
-            >
-              <h3 class="text-6xl">Application</h3>
-              <div class="hidden group-hover:flex flex-col items-center w-full">
-                <div class="border-2 border-white w-1/2 my-3"></div>
-                <p>Junior High School</p>
-                <p>Senior High School</p>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        <div class="h-96 w-1/4 rounded-[33px] relative group bg-green-800">
-          <img
-            src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80"
-            class="w-full h-full object-center object-cover rounded-[33px] opacity-[0.4]"
-            alt=""
-          />
-          <div class="absolute inset-0 h-full">
-            <div
-              class="w-full flex flex-col mx-auto items-center h-full justify-center text-white"
-            >
-              <h3 class="text-7xl">Events</h3>
-              <div class="hidden group-hover:flex flex-col items-center w-full">
-                <div class="border-2 border-white w-1/2 my-3"></div>
-                <p>School Program</p>
-                <p>Activities</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
+    <div
+      class="h-full w-full pt-20 pb-10 md:pb-0 px-5 flex flex-col justify-center mx-auto"
+    >
+      <h1 class="text-5xl md:text-7xl font-bold text-lpsci-green">Featured</h1>
+    </div>
+    <FeaturedCarousel client:only="solid-js" />
     {/* SECTION: News Articles */}
-    <div class="h-full w-full py-20 px-5">
-      <h1 class="text-7xl font-bold text-lpsci-green">News & Articles</h1>
-      <div class="grid grid-cols-3 justify-between pt-16 px-6 w-full space-x-3">
-        <NewsArticleCard />
-        <NewsArticleCard />
-        <NewsArticleCard />
+    <div class="flex flex-col justify-center mx-auto">
+      <div class="h-full w-full py-20 px-5">
+        <h1 class="text-5xl md:text-7xl font-bold text-lpsci-green">
+          News & Articles
+        </h1>
+        <div
+          class="flex items-start space-x-16 md:grid grid-cols-3 justify-between pt-16 px-6 w-full md:space-x-3 overflow-x-auto"
+        >
+          <NewsArticleCard
+            hammer={"ENDING WITH FLYING COLORS"}
+            headline="Likhang Lapiscian Art Fair: Lapiscian artists show-off their talent selling artworks, merchandise"
+            lead="Las Piñas City National Science High School's Arts Club hosted the first-ever Likhang Lapiscian Art Fair last February 21 - 23, 2023, in front of the Villar Building."
+            author="Ralph Andrei Nunez & Heiden Medel"
+            publication="The LPSci Standard Press"
+            coverImg="/news-articles/lpsci-art-fair-03-2023.jpg"
+            articleLink="https://www.facebook.com/lpscistandardpress2021/posts/pfbid0219CMtnXrACmaoCrGLmDDRLyQsNWGcFzXC97v9XrMmNdyHHaivE5tr3bbekiEWinAl"
+          />
+          <NewsArticleCard
+            headline="Dance Competition 2023: Celebration of Music, Creativity, and Passion for Dance"
+            lead="Las Piñas City National Science High School held its Dance Competition Event to celebrate the passion for dance of Lapiscians last February 20. Each of the groups were composed of uniquely gifted and talented dancers that exhibited their skills in front of the studentry."
+            author="Joshua Santos"
+            publication="The LPSci Standard Press"
+            coverImg="/news-articles/dance-competition-03-2023.jpg"
+            articleLink="https://www.facebook.com/lpscistandardpress2021/posts/pfbid0QDZsdhi4m6egxCR96wmL1H2m4cZMw6XTLs3g5odGaM6t49rN8XBYk8P4ZUhsYAvQl"
+          />
+          <NewsArticleCard
+            headline="LPSci Vball Boys pasok sa semis ng Cluster Meet"
+            lead="Hindi lang hiyawan ng Lapiscians kundi pati ang karisma ng LPSci Volleyball Boys ang nangibabaw nang magwagi ang koponan, 25-23, 13-25, 25-16, kontra Las Piñas East National High School sa 2023 Volleyball Boys Cluster Meet sa Las Piñas National Senior High School-Doña Josefa Campus, kahapon."
+            author="Israfil Al-Khabir Viray"
+            publication="Ang Paham"
+            coverImg="/news-articles/vball-competition-03-2023.jpg"
+            articleLink="https://www.facebook.com/LPSciAngPaham/posts/pfbid02Z7UV6eY97JjScoKSMFwmF93haPbCc493fxkEp4zyf88X5TjQdHcjCAgxVv52kKXvl"
+          />
+        </div>
       </div>
     </div>
     {/* SECTION: Footer */}
-    <div class="bg-white h-[50vh] w-screen flex items-center justify-center">
-      <div class="text-center">
-        <h1 class="text-6xl text-white mb-6 tracking-wide">
-          <span class="text-lpsci-red">
-            A bright mind
-            {" "}
-          </span>
-          <span class="text-lpsci-yellow">
-            is nothing without
-            {" "}
-          </span>
-          <span class="text-lpsci-green"> a humble heart</span>
-        </h1>
+    <div
+      class="bg-white w-screen flex flex-col md:flex-row items-center justify-center md:justify-between space-y-6 px-10 mb-10"
+    >
+      <div class="flex flex-col md:flex-row items-center space-y-3">
+        <img
+          src="https://ucarecdn.com/762db30b-57d6-4fe2-ae8b-c17aceb3a384/-/preview/-/quality/smart/-/format/auto/"
+          alt=""
+          class="h-14 w-14 md:mr-3"
+        />
+        <span class="text-gray-600 text-sm">
+          A Bright Mind is Nothing,
+          <br />
+          Without a Humble Heart
+        </span>
+      </div>
+      <div class="flex items-center space-x-5">
+        <a
+          href="https://www.facebook.com/LPCNSH"
+          class="text-gray-500 hover:text-gray-600"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            ><path
+              fill="currentColor"
+              d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999c0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891c1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href="mailto:lpscience09@gmail.com"
+          class="text-gray-500 hover:text-gray-600"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            ><path
+              fill="currentColor"
+              d="m18.73 5.41l-1.28 1L12 10.46L6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"
+            ></path>
+          </svg>
+        </a>
+        <a href="tel:0288172068" class="text-gray-500 hover:text-gray-600">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            ><path
+              fill="currentColor"
+              d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02c-.37-1.11-.56-2.3-.56-3.53c0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
+            ></path>
+          </svg>
+        </a>
       </div>
     </div>
   </main>
