@@ -7,7 +7,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     <header>
         <Navbar />
     </header>
-    <main class="px-20 py-10">
+    <main class="px-10 md:px-20 py-10">
         <h1 class="text-lpsci-green text-6xl">ABOUT</h1>
         <div class="flex flex-col space-y-10 py-10">
             <div class="flex flex-col items-start space-y-7">
@@ -23,7 +23,7 @@ import MainLayout from "../layouts/MainLayout.astro";
                     <h3 class="text-lpsci-green text-4xl">
                         LAS PIÑAS CITY NATIONAL SCIENCE HIGH SCHOOL
                     </h3>
-                    <p class="text-gray-500">
+                    <p class="text-gray-500 text-justify">
                         Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit. Sapiente incidunt quos rem, repudiandae corrupti
                         nam, accusamus, iusto blanditiis consectetur nobis
@@ -37,11 +37,18 @@ import MainLayout from "../layouts/MainLayout.astro";
                 </div>
             </div>
 
-            <div class="flex items-start space-x-5">
-                <div class="bg-gray-500 w-96 h-56"></div>
+            <div class="flex items-start md:space-x-5">
+                <div class="hidden md:block w-[600px] h-60 shadow-xl">
+                    <img
+                        src="/mission.png"
+                        alt=""
+                        class="w-full h-full object-cover object-center rounded shadow-xl"
+                        style="object-position: center 60%;"
+                    />
+                </div>
                 <div class="flex flex-col items-start space-y-1">
                     <h3 class="text-lpsci-red text-5xl">Mission</h3>
-                    <p class="text-gray-500 text-lg">
+                    <p class="text-gray-500 text-lg text-justify">
                         Las Piñas Science High School shall be known as a
                         premier educational institution that molds
                         students&apos; holistic personality and scientific
@@ -50,14 +57,14 @@ import MainLayout from "../layouts/MainLayout.astro";
                     </p>
                 </div>
             </div>
-            <div class="flex items-start space-x-5">
+            <div class="flex items-start md:space-x-5">
                 <div class="flex flex-col space-y-1">
                     <h3
                         class="inline-flex justify-end text-lpsci-yellow text-5xl"
                     >
                         VISION
                     </h3>
-                    <p class="text-gray-500 text-lg">
+                    <p class="text-gray-500 text-lg text-justify">
                         Las Piñas Science High School provides a learning
                         environment that upholds academic excellence through
                         quality and relevant education encompassing the
@@ -65,10 +72,24 @@ import MainLayout from "../layouts/MainLayout.astro";
                         individuality of every student
                     </p>
                 </div>
-                <div class="bg-gray-500 w-96 h-56"></div>
+                <div class="hidden md:block w-[600px] h-60 shadow-xl">
+                    <img
+                        src="/vision.png"
+                        alt=""
+                        class="w-full h-full object-cover object-center rounded shadow-xl"
+                        style="object-position: center 60%;"
+                    />
+                </div>
             </div>
-            <div class="flex items-start space-x-5">
-                <div class="bg-gray-500 w-96 h-56"></div>
+            <div class="flex items-start md:space-x-5">
+                <div class="hidden md:block w-[600px] h-60 shadow-xl">
+                    <img
+                        src="/community.png"
+                        alt=""
+                        class="w-full h-full object-cover object-center rounded shadow-xl"
+                        style="object-position: center 60%;"
+                    />
+                </div>
                 <div class="flex flex-col items-start space-y-1">
                     <h3 class="text-lpsci-green text-5xl">Community</h3>
                     <p class="text-gray-500 text-lg">
@@ -84,7 +105,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 
         <div class="mt-10">
             <h2 class="text-lpsci-red text-5xl mb-2">Location</h2>
-            <div class="overflow-hidden h-80">
+            <div class="overflow-hidden h-60 md:h-80">
                 <div
                     id="google-maps-display"
                     style="height:100%; width:100%;max-width:100%;"
@@ -98,9 +119,9 @@ import MainLayout from "../layouts/MainLayout.astro";
             </div>
         </div>
     </main>
-    <footer class="px-20 py-10">
+    <footer id="contacts" class="px-10 md:px-20 py-10">
         <h2 class="text-lpsci-green text-5xl">Contacts</h2>
-        <div class="flex items-center justify-between">
+        <div class="grid grid-cols-2 md:flex items-center justify-between mt-3">
             <a
                 href="https://www.facebook.com/LPCNSH"
                 class="text-gray-500 hover:text-gray-600 inline-flex items-center"
