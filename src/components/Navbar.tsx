@@ -13,7 +13,7 @@ export default function Navbar(): JSX.Element {
         </a>
         <div class="hidden md:block space-x-6 justify-self-start">
           <a href="/about" class="text-lg font-semibold text-green-700">About</a>
-          <a href="/admissions" class="text-lg font-semibold text-green-700">Contacts</a>
+          <a href="/about#contacts" class="text-lg font-semibold text-green-700">Contacts</a>
           <a href="/help" class="text-lg font-semibold text-green-700">Help</a>
         </div>
       </div>
